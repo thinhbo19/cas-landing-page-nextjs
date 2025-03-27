@@ -1,9 +1,19 @@
+"use client";
+
 import { Col, Row, Typography } from "antd";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
+import { useRef, useState, useEffect } from "react";
 const { Paragraph } = Typography;
 
 const StatisticsSection = () => {
+  const countUpRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   return (
     <Row gutter={[32, 32]} justify="center">
       <Col xs={24} sm={12} md={6}>
@@ -60,15 +70,22 @@ const StatisticsSection = () => {
             viewport={{ once: true }}
             className="relative"
           >
-            <CountUp
-              start={0}
-              end={45}
-              suffix="+"
-              className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#F6D088] to-[#E5B660] mb-4 block"
-              duration={2.5}
-              enableScrollSpy
-              scrollSpyOnce
-            />
+            <span
+              ref={countUpRefs[0]}
+              className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#F6D088] to-[#E5B660] mb-4 block"
+            >
+              {isMounted && (
+                <CountUp
+                  start={0}
+                  end={45}
+                  suffix="+"
+                  duration={2.5}
+                  enableScrollSpy
+                  scrollSpyOnce
+                  useEasing={true}
+                />
+              )}
+            </span>
             <Paragraph
               style={{
                 color: "white",
@@ -120,15 +137,22 @@ const StatisticsSection = () => {
             viewport={{ once: true }}
             className="relative"
           >
-            <CountUp
-              start={0}
-              end={55000}
-              suffix="+"
-              className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#F6D088] to-[#E5B660] mb-4 block"
-              duration={2.5}
-              enableScrollSpy
-              scrollSpyOnce
-            />
+            <span
+              ref={countUpRefs[1]}
+              className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#F6D088] to-[#E5B660] mb-4 block"
+            >
+              {isMounted && (
+                <CountUp
+                  start={0}
+                  end={55000}
+                  suffix="+"
+                  duration={2.5}
+                  enableScrollSpy
+                  scrollSpyOnce
+                  useEasing={true}
+                />
+              )}
+            </span>
             <Paragraph
               style={{
                 color: "white",
@@ -186,15 +210,22 @@ const StatisticsSection = () => {
             viewport={{ once: true }}
             className="relative"
           >
-            <CountUp
-              start={0}
-              end={300}
-              suffix="+"
-              className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#F6D088] to-[#E5B660] mb-4 block"
-              duration={2.5}
-              enableScrollSpy
-              scrollSpyOnce
-            />
+            <span
+              ref={countUpRefs[2]}
+              className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#F6D088] to-[#E5B660] mb-4 block"
+            >
+              {isMounted && (
+                <CountUp
+                  start={0}
+                  end={300}
+                  suffix="+"
+                  duration={2.5}
+                  enableScrollSpy
+                  scrollSpyOnce
+                  useEasing={true}
+                />
+              )}
+            </span>
             <Paragraph
               style={{
                 color: "white",
@@ -266,15 +297,22 @@ const StatisticsSection = () => {
             viewport={{ once: true }}
             className="relative"
           >
-            <CountUp
-              start={0}
-              end={6}
-              suffix="+"
-              className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#F6D088] to-[#E5B660] mb-4 block"
-              duration={2.5}
-              enableScrollSpy
-              scrollSpyOnce
-            />
+            <span
+              ref={countUpRefs[3]}
+              className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#F6D088] to-[#E5B660] mb-4 block"
+            >
+              {isMounted && (
+                <CountUp
+                  start={0}
+                  end={6}
+                  suffix="+"
+                  duration={2.5}
+                  enableScrollSpy
+                  scrollSpyOnce
+                  useEasing={true}
+                />
+              )}
+            </span>
             <Paragraph
               style={{
                 color: "white",

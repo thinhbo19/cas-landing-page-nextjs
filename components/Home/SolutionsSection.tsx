@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -39,8 +41,13 @@ const SolutionsSection = () => {
               </span>
             </div>
             <p className="text-white mb-4">
-              Thanh toán được các loại thẻ: Visa, Master và JCB.<br /><br />
-              Kết hợp phần mền quản lý bán hàng Posapp, giúp chủ doanh nghiệp quản lý đơn hàng vầ thanh toán từ xa.<br /><br />
+              Thanh toán được các loại thẻ: Visa, Master và JCB.
+              <br />
+              <br />
+              Kết hợp phần mền quản lý bán hàng Posapp, giúp chủ doanh nghiệp
+              quản lý đơn hàng vầ thanh toán từ xa.
+              <br />
+              <br />
               Quản lý hiệu quả và báo cáo thu chi rõ ràng.
             </p>
             <motion.button
@@ -89,8 +96,13 @@ const SolutionsSection = () => {
               </span>
             </div>
             <p className="text-white mb-4">
-              Thủ tục đơn giản nhanh chóng.<br /><br />
-              Hoạt động được trên mọi loại hình doanh nghiệp: y tế, trường học, siêu thị,...<br /><br />
+              Thủ tục đơn giản nhanh chóng.
+              <br />
+              <br />
+              Hoạt động được trên mọi loại hình doanh nghiệp: y tế, trường học,
+              siêu thị,...
+              <br />
+              <br />
               Phí cạnh tranh, luôn hỗ trợ biểu phí tốt nhất.
             </p>
             <motion.button
@@ -139,8 +151,12 @@ const SolutionsSection = () => {
               </span>
             </div>
             <p className="text-white mb-4">
-              Quản Lý Giao Dịch.<br /><br />
-              Quản Lý người dùng.<br /><br />
+              Quản Lý Giao Dịch.
+              <br />
+              <br />
+              Quản Lý người dùng.
+              <br />
+              <br />
               Hỗ trợ Tạo đơn hàng.
             </p>
             <motion.button

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,8 +16,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "CAS Corporation | Giải pháp Công nghệ Thanh toán Hiện đại",
-  description: "CAS cung cấp các giải pháp và dịch vụ công nghệ thanh toán hiện đại, đáp ứng mọi nhu cầu của doanh nghiệp. Kiến tạo nền tảng - Chắp cánh thành công!",
-  keywords: "CAS, công nghệ thanh toán, giải pháp doanh nghiệp, startup, fintech, thanh toán hiện đại",
+  description:
+    "CAS cung cấp các giải pháp và dịch vụ công nghệ thanh toán hiện đại, đáp ứng mọi nhu cầu của doanh nghiệp. Kiến tạo nền tảng - Chắp cánh thành công!",
+  keywords:
+    "CAS, công nghệ thanh toán, giải pháp doanh nghiệp, startup, fintech, thanh toán hiện đại",
   authors: [{ name: "CAS Corporation" }],
   creator: "CAS Corporation",
   publisher: "CAS Corporation",
@@ -33,7 +36,8 @@ export const metadata: Metadata = {
     locale: "vi_VN",
     url: "https://cascorp.vn",
     title: "CAS Corporation | Giải pháp Công nghệ Thanh toán Hiện đại",
-    description: "CAS cung cấp các giải pháp và dịch vụ công nghệ thanh toán hiện đại, đáp ứng mọi nhu cầu của doanh nghiệp.",
+    description:
+      "CAS cung cấp các giải pháp và dịch vụ công nghệ thanh toán hiện đại, đáp ứng mọi nhu cầu của doanh nghiệp.",
     siteName: "CAS Corporation",
     images: [
       {
@@ -47,7 +51,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "CAS Corporation | Giải pháp Công nghệ Thanh toán Hiện đại",
-    description: "CAS cung cấp các giải pháp và dịch vụ công nghệ thanh toán hiện đại, đáp ứng mọi nhu cầu của doanh nghiệp.",
+    description:
+      "CAS cung cấp các giải pháp và dịch vụ công nghệ thanh toán hiện đại, đáp ứng mọi nhu cầu của doanh nghiệp.",
     images: ["/og-image.jpg"],
   },
 };
@@ -69,6 +74,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -1,3 +1,4 @@
+"use client";
 import { Col, Row, Typography } from "antd";
 import Title from "antd/es/typography/Title";
 import { motion } from "framer-motion";
